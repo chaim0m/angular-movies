@@ -1,0 +1,38 @@
+<budget></budget>
+<search></search>
+
+<!-- <mat-button-toggle-group #group="matButtonToggleGroup" value=1>
+  <mat-button-toggle #button1 (click)="toggleMovies()" value=0>
+    Movie Library
+    <mat-icon>movie</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle (click)="toggleMovies()" value=1>
+    Movie Store
+    <mat-icon>movie</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<br/> -->
+
+
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Movie Store</h2>
+    <mat-tab-group class="movies">
+      <mat-tab label="movie store">
+        <div>
+          <all-movies></all-movies>
+        </div>
+      </mat-tab>
+      <mat-tab label="my movies">
+        <div>
+          <my-movies></my-movies>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
+<!-- <div><my-movies></my-movies></div>
+  <div>  <all-movies *ngIf="movieToggleVar"></all-movies>
+  </div> -->
