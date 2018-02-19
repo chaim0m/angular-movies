@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { MovieStoreService } from '../moviestore.service';
 
-
 @Component({
   selector: 'search',
   templateUrl: './search.component.html',
@@ -11,7 +10,7 @@ import { MovieStoreService } from '../moviestore.service';
 export class SearchComponent implements OnInit {
 
   constructor(private generalservice: UserService, private moviestoreservice:MovieStoreService) { }
-
+  
   ngOnInit() {
   }
   

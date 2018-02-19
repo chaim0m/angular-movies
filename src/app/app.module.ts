@@ -12,7 +12,10 @@ import { MovieContainerComponent } from './movie-container/movie-container.compo
 import { SearchComponent } from './search/search.component';
 import { BudgetComponent } from './budget/budget.component';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './/app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     AllMoviesComponent,
     BudgetComponent,
     MovieContainerComponent,
-    SearchComponent
+    SearchComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatButtonToggleModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [UserService, MovieStoreService],
   bootstrap: [AppComponent]

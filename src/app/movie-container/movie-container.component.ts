@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieStoreService } from '../moviestore.service';
 
-
 @Component({
   selector: 'movie-container',
   templateUrl: './movie-container.component.html',
@@ -10,11 +9,12 @@ import { MovieStoreService } from '../moviestore.service';
 export class MovieContainerComponent implements OnInit {
   //  movieToggleVar: boolean;
 
-  constructor(private generalservice: MovieStoreService) {
+  constructor(private moviestoreservice: MovieStoreService) {
    }
 
   ngOnInit() {
     // this.movieToggleVar=true;
+    
   }
   // toggleMovies(){
   //   this.movieToggleVar=!this.movieToggleVar;

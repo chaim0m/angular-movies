@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MovieStoreService } from '../moviestore.service';
 import { UserService } from '../user.service';
-import Movie from '../movie/movie';
+import { ActivatedRoute } from '@angular/router';
+
+import Movie from '../models/movie';
 
 
 @Component({
@@ -11,7 +13,7 @@ import Movie from '../movie/movie';
 })
 export class MyMoviesComponent implements OnInit {
   // @Input() movies: any[];
-  constructor(private moviestoreservice: MovieStoreService, private userservice: UserService) { }
+  constructor(private moviestoreservice: MovieStoreService, private userservice: UserService,private route: ActivatedRoute) { }
   title: string;
   movie: Movie;
   // get mymovies() {
@@ -25,9 +27,9 @@ export class MyMoviesComponent implements OnInit {
     this.mymovies=this.userservice.getMyMovies();
 
   }
-  removeMovie(i){
-    this.moviestoreservice.addMovie(this.mymovies[i]);
-   this.mymovies = this.userservice.removeMovie(this.mymovies[i]);
+  removeMovie(movie: Movie){
+    // this.moviestoreservice.addMovie(movie);
+   this.mymovies = this.userservice.removeMovie(movie);
 
     // this.userservice.addToBudget(this.movie.price);
   }

@@ -1,6 +1,12 @@
-
-<div style="border: solid red 8px;">
-  <h1>This is the meta container containing all free floating items that are not specifically related to other items.</h1>
+<base href="/">
+<!-- <div class="main">
   <movie-container></movie-container>
-</div>
-<mat-checkbox>Subscribe!</mat-checkbox>
+</div> -->
+
+<nav>
+  <a routerLink="/">Movies</a>
+  <a routerLink="/about">About</a>
+  <a routerLink="/balance">Balance</a>
+
+</nav>
+<router-outlet></router-outlet>
