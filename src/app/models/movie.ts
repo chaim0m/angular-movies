@@ -7,4 +7,5 @@ export default class Movie {
     shortDescription: string;
     longDescription: string;
     director: string;
+    // review: reviews[];
 }

@@ -1,4 +1,5 @@
 <h3>Movie Store</h3>
+<search></search>
 <movie *ngFor= "let movie of movies" [movie]="movie"
 (toggleMovie)="buyMovie($event)" btnText="Buy">
 </movie>

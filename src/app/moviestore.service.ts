@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import Movie from './models/movie';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import {HttpParams} from "@angular/common/http";
 
 
 // let ALLMOVIES: Movie[] = [
@@ -19,7 +20,9 @@ export class MovieStoreService {
   getAllMovies():Observable<Movie[]> {
     return this.http.get<Movie[]>('https://anguflix-api.herokuapp.com/api/movies')
   }
+  
   }
+
   
   // buyMovie(movie: Movie){
   //      //removes the movie from the array of ALLMOVIES, adds to array of MYMOVIES (User service) and reduces the budget
